@@ -1,0 +1,17 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #ffffff;
+}
+
+#header-nav {
+    background-color: #797875 !important;
+    border-radius: 0;
+    border: 2px solid black;
+  }
+
+.navbar-brand h1{
+    color: black;
+}
+  
+
