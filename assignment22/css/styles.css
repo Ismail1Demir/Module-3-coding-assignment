@@ -1,95 +1,233 @@
+
 body {
     font-size: 16px;
-    color: #000; /* Black text color */
-    background-color: #ffffff;
-  }
-  
-  #header-nav {
-      background-color: #797875 !important;
-      border-radius: 0;
-      border: 2px solid black;
-  }
-  
-  .navbar-brand h1 {
-      color: black;
-  }
-  
-  .navbar-toggler {
-      border: 3px solid #000000;
-  }
-  
-  .navbar-toggler:hover {
-      background-color: #ffffff; /* Change to white on hover */
-  }
-  
-  
-  .navbar-collapse{
-    width: 100vw !important;
-    background-color: #ffffff !important;
-    
-    padding: 0; /* Remove padding */
-    width: 100vw !important; /* Take full viewport width */
-    position: absolute; /* Position it absolutely to the window */
-    left: 0; /* Align to the left of the viewport */
-    top: 100%; /* Place it just below the navbar */
-    z-index: 1000; /* Ensure it appears on top */
-    border-top: 2px solid black; /* Optional: */
-  }
-  
-  .navbar-nav {
-      width: 100%; /* Ensure the navbar items take the full width */
-  }
-  
-  .nav-item {
-      text-align: center;
-      width: 100vw !important; /* Ensure the border extends fully across the width */
-      border-bottom: 1px solid black; /* Add black border between links */
-      padding: 10px 0; /* Padding for spacing */
-      background-color: #ffffff; /* Ensure each item has a white background */
-  }
-  
-  .nav-item:last-child {
-      border-bottom: none; /* Remove border for the last item */
-  }
-  
-  .nav-link {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      color: #000; /* Ensure the text color is black */
-  }
-  
-  .nav-link:hover {
-      background-color: #f8f9fa; /* Optional: Light gray background on hover */
+    color: #fff;
+    background-color: #61122f;
+    font-family: 'Oxygen', sans-serif;
   }
 
-  .menu-block {
-    background-color: #a9a9a9; /* Gray background color */
-    border: 2px solid black; /* Optional: Black border around the block */
-    border-radius: 1px; /* Optional: Rounded corners */
+#header-nav {
+    background-color: #420101 !important;
+    height: auto; /* Adjust height as needed */
+    padding-bottom: 20px; /* Adjust for spacing */
+    position: relative;
+}
+
+
+#header-nav .navbar-brand {
+    margin-right: auto; /* Pushes the logo to the far left */
+}
+
+#header-nav .navbar-name {
+    text-align: center;
+    margin-bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#header-nav .navbar-name h1 {
+    font-family: 'Lora', serif;
+    color: #557c3e;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 3px 1px 1px #222;
+    margin: 0;
+    padding-bottom: 0px; /* Adjust the space between text and links */
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #557c3e; /* Customize the background color if needed */
+    position: absolute;
+    right: 20px; /* Ensures the button is far right */
+}
+
+.navbar-nav {
+    margin-top: 10px; /* Space between the text and links */
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    color: #000000; /* Customize link color */
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 1em;
     
 }
-.menu-block h3 {
-    margin-bottom: 20px; /* Space between the title and text */
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #557c3e; /* Hover background color */
+    border-radius: 4px;
 }
 
-.menu-block p {
-    text-align: justify; /* Justify text alignment */
-    margin-bottom: 0; /* Remove default margin below the paragraph */
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px; /* Remove bottom margin */
+    padding: 20px 0px; /* Remove padding to avoid any extra space */
 }
 
-  
-  /********** Large devices only (1200px and up) **********/
-@media(min-width: 1200px) {
-    .nav-item { /* Hide navigation links on large screens */
-        display: none !important;
+.video-section iframe {
+    width: 90%; /* Cover 90% of the page width */
+    max-width: 800px; /* Set a max width */
+    aspect-ratio: 16/9; /* Ensure the video maintains a 16:9 ratio */
+    border-radius: 10px; /* Optional: add rounded corners */
+    border: none; /* Remove border */
+}
+
+#map-tile{
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #b02659;
+  overflow: hidden;
+}
+
+#menu-tile{
+    background: url("../images/contact-photo.png") no-repeat;
+    background-size: cover;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end; /* Align at the bottom */
+    background-color: #b81a1a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */ 
+}
+
+#history-tile{
+    background: url("../images/history-photo.png");
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    background-size: cover;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end; /* Align at the bottom */
+    background-color: #4d3f3f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+#menu-tile:hover, #history-tile:hover, #map-tile:hover {
+    transform: translateY(-10px); /* Move the box up by 10px on hover */
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 1);
+}
+
+#menu-tile span, #history-tile span, #map-tile span{
+    color: #ffffff; /* White text color for contrast */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 10px 20px; /* Add some padding around the text */
+    text-align: center;
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    font-weight: bold; /* Make the text bold */   
+}
+.menu-link {
+    text-decoration: none; /* Remove underline from the link */
+    display: block; /* Make the whole tile clickable */
+}
+
+.section-boxes {
+    margin: 0 20px 20px 20px; /* Add margin to the left and right of the section, and bottom margin */
+}
+
+.section-boxes .row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.section-boxes .col-md-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px; /* Add space above each box */
+}
+
+/* FOOTER */
+.panel-footer {
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #222;
+    border-top: 0;
+  }
+  .panel-footer div.row {
+    margin-bottom: 35px;
+  }
+  #hours, #address {
+    line-height: 2;
+  }
+  #hours > span, #address > span {
+    font-size: 1.3em;
+  }
+  #address p {
+    color: #557c3e;
+    font-size: .8em;
+    line-height: 1.8;
+  }
+  #testimonials {
+    font-style: italic;
+  }
+  #testimonials p:nth-child(2) {
+    margin-top: 25px;
+  }
+
+  .contact_f{
+    
+    text-decoration: none;
+  }
+  /* END FOOTER */
+
+  .welcome-text {
+    text-align: center; /* Center the text */
+    font-size: 3em; /* Larger font size */
+    background: linear-gradient(90deg, #ff494c, #c0a4a4); /* Gradient effect */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent to show the gradient */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.welcome-description {
+    text-align: center; /* Center the text */
+    font-size: 1.2em; /* Slightly larger font size for readability */
+    color: #fff; /* White text color */
+    max-width: 800px; /* Limit the width of the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+    padding: 10px 20px; /* Add some padding */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+@media (max-width: 575.98px) {
+    .section-boxes .col-md-4 {
+        padding-left: 5px; /* Reduce padding on smaller screens */
+        padding-right: 5px; /* Reduce padding on smaller screens */
+        max-width: 90%; /* Set a max width to make the boxes smaller */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #map-tile, #menu-tile, #history-tile {
+        height: 200px; /* Reduce the height of the boxes */
+        margin-bottom: 10px; /* Reduce the space between the boxes */
+    }
+
+    .video-section iframe {
+        width: 95%; /* Make the video slightly larger */
+        max-width: 100%; /* Allow the video to take up more space */
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    .nav-item { /* Hide navigation links on large screens */
-        display: none !important;
-    }
 
-}
-  
+
+
+
+
+
